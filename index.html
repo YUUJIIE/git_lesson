@@ -18,6 +18,7 @@
                 </ul>
             </div>
         </article>
+
         <article>
             <div class="explain">変更をステージに追加する</div>
             <div class="txt_box">
@@ -25,6 +26,180 @@
                     <li>git add {ファイル名}</li>
                     <li>git add {ディレクトリ名}</li>
                     <li>git add .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更を記録する（コミット）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git commit</li>
+                    <li>git commit -m  "{メッセージ}"</li>
+                    <li>git commit- V</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">現在の変更状況を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git status</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更差分を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>#git addする前の変更分</li>
+                    <li>git diff</li>
+                    <li>git diff {ファイル名}</li>
+                </ul>
+                <ul>
+                    <li>#git addした後の変更分</li>
+                    <li>git diff --staged</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更履歴を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git log</li>
+                    <li>git log --oneline</li>
+                    <li>git log -P index.html</li>
+                    <li>git log -n {コミット数}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルの削除を記録する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git rm {ファイル名}</li>
+                    <li>git rm -r {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#ファイルを残したいとき</li>
+                    <li>git rm --cached {ファイル名}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルの移動を記録する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git mv {旧ファイル} {新ファイル}</li>
+                </ul>
+                <ul>
+                    <li>#以下のコマンドと同じ</li>
+                    <li>mv {旧ファイル} {新ファイル}</li>
+                    <li>git rm {旧ファイル}</li>
+                    <li>git add {新ファイル}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートリポジトリ（GitHub）を新規追加する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote add origin {https://~}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートリポジトリ（GitHub）へ送信する（プッシュ）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git push {リモート名} {ブランチ名}</li>
+                    <li>git push origin main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">初回のみ</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git push -u origin main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルへの変更を取り消す</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git checkout -- {ファイル名}</li>
+                    <li>git checkout -- {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#全変更を取り消す</li>
+                    <li>git checkout -- .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ステージした変更を取り消す</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git reset HEAD {ファイル名}</li>
+                    <li>git reset HEAD {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#全変更を取り消す</li>
+                    <li>git reset HEAD .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">直前のコミットをやり直す（プッシュしたコミットはやり直せない）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git commit --amend</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更差分を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git </li>
+                    <li>git </li>
+                    <li>git </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更差分を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git </li>
+                    <li>git </li>
+                    <li>git </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更差分を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git </li>
+                    <li>git </li>
+                    <li>git </li>
                 </ul>
             </div>
         </article>
