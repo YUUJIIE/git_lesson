@@ -172,34 +172,95 @@
         </article>
 
         <article>
-            <div class="explain">変更差分を確認する</div>
+            <div class="explain">リモートを表示する</div>
             <div class="txt_box">
                 <ul>
-                    <li>git </li>
-                    <li>git </li>
-                    <li>git </li>
+                    <li>git remote</li>
+                </ul>
+                <ul>
+                    <li>#対応するURLを表示</li>
+                    <li>git remote -v</li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <div class="explain">変更差分を確認する</div>
+            <div class="explain">リモートリポジトリを新規追加する</div>
             <div class="txt_box">
                 <ul>
-                    <li>git </li>
-                    <li>git </li>
-                    <li>git </li>
+                    <li>git remote add {リモート名} {リモートURL}</li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <div class="explain">変更差分を確認する</div>
+            <div class="explain">リモートから情報を取得する</div>
             <div class="txt_box">
                 <ul>
-                    <li>git </li>
-                    <li>git </li>
-                    <li>git </li>
+                    <li>git fetch {リモート名}</li>
+                    <li>git fetch origin</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートから情報を取得してマージする（プル）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git pull {リモート名} {ブランチ名}</li>
+                    <li>git pull origin main</li>
+                </ul>
+                <ul>
+                    <li>#上記コマンドは省略可能</li>
+                    <li>git pull</li>
+                </ul>
+                <ul>
+                    <li>#これは下記コマンドと同じこと</li>
+                    <li>git fetch origin main</li>
+                    <li>git merge origin/main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートの情報を詳しく知る</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote show {リモート名}</li>
+                    <li>git remote show origin</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモート名を変更する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote rename {旧リモート名} {新リモート名}</li>
+                    <li>git remote rename tutorial new_tutorial</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートを削除する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote rm {リモート名}</li>
+                    <li>git remote rm new-tutorial</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ブランチの一覧を表示する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git branch</li>
+                </ul>
+                <ul>
+                    <li>#全てのブランチを表示する</li>
+                    <li>git branch -a</li>
                 </ul>
             </div>
         </article>
