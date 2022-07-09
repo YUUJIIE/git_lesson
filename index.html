@@ -4,9 +4,273 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gitコマンドまとめ</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <header>Gitコマンドまとめ</header>
+    <section>
+        <article>
+            <div class="explain">Github上のリモートリポジトリ⇨ローカル</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git clone</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更をステージに追加する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git add {ファイル名}</li>
+                    <li>git add {ディレクトリ名}</li>
+                    <li>git add .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更を記録する（コミット）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git commit</li>
+                    <li>git commit -m  "{メッセージ}"</li>
+                    <li>git commit- V</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">現在の変更状況を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git status</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更差分を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>#git addする前の変更分</li>
+                    <li>git diff</li>
+                    <li>git diff {ファイル名}</li>
+                </ul>
+                <ul>
+                    <li>#git addした後の変更分</li>
+                    <li>git diff --staged</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">変更履歴を確認する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git log</li>
+                    <li>git log --oneline</li>
+                    <li>git log -P index.html</li>
+                    <li>git log -n {コミット数}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルの削除を記録する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git rm {ファイル名}</li>
+                    <li>git rm -r {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#ファイルを残したいとき</li>
+                    <li>git rm --cached {ファイル名}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルの移動を記録する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git mv {旧ファイル} {新ファイル}</li>
+                </ul>
+                <ul>
+                    <li>#以下のコマンドと同じ</li>
+                    <li>mv {旧ファイル} {新ファイル}</li>
+                    <li>git rm {旧ファイル}</li>
+                    <li>git add {新ファイル}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートリポジトリ（GitHub）を新規追加する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote add origin {https://~}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートリポジトリ（GitHub）へ送信する（プッシュ）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git push {リモート名} {ブランチ名}</li>
+                    <li>git push origin main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">初回のみ</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git push -u origin main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ファイルへの変更を取り消す</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git checkout -- {ファイル名}</li>
+                    <li>git checkout -- {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#全変更を取り消す</li>
+                    <li>git checkout -- .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ステージした変更を取り消す</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git reset HEAD {ファイル名}</li>
+                    <li>git reset HEAD {ディレクトリ名}</li>
+                </ul>
+                <ul>
+                    <li>#全変更を取り消す</li>
+                    <li>git reset HEAD .</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">直前のコミットをやり直す（プッシュしたコミットはやり直せない）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git commit --amend</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートを表示する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote</li>
+                </ul>
+                <ul>
+                    <li>#対応するURLを表示</li>
+                    <li>git remote -v</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートリポジトリを新規追加する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote add {リモート名} {リモートURL}</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートから情報を取得する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git fetch {リモート名}</li>
+                    <li>git fetch origin</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートから情報を取得してマージする（プル）</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git pull {リモート名} {ブランチ名}</li>
+                    <li>git pull origin main</li>
+                </ul>
+                <ul>
+                    <li>#上記コマンドは省略可能</li>
+                    <li>git pull</li>
+                </ul>
+                <ul>
+                    <li>#これは下記コマンドと同じこと</li>
+                    <li>git fetch origin main</li>
+                    <li>git merge origin/main</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートの情報を詳しく知る</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote show {リモート名}</li>
+                    <li>git remote show origin</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモート名を変更する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote rename {旧リモート名} {新リモート名}</li>
+                    <li>git remote rename tutorial new_tutorial</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">リモートを削除する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git remote rm {リモート名}</li>
+                    <li>git remote rm new-tutorial</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="explain">ブランチの一覧を表示する</div>
+            <div class="txt_box">
+                <ul>
+                    <li>git branch</li>
+                </ul>
+                <ul>
+                    <li>#全てのブランチを表示する</li>
+                    <li>git branch -a</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>
+            参考：
+            <a href="https://www.udemy.com/course/unscared_git/" target="_blank">
+                Git： もう怖くないGit！チーム開発で必要なGitを完全マスター</a>
+        </p>
+    </footer>
 </body>
 </html>
